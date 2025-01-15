@@ -1,4 +1,4 @@
-// Dados do Quiz
+
 const quizData = [
     {
         question: "Qual foi o precursor da internet moderna?",
@@ -62,7 +62,7 @@ const quizData = [
     }
 ];
 
-// Seletores
+
 const questionElement = document.getElementById("question");
 const answersContainer = document.getElementById("answers");
 const nextButton = document.getElementById("next-button");
@@ -73,11 +73,11 @@ const restartButton = document.getElementById("restart-button");
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Função para carregar uma pergunta
+
 function loadQuestion() {
     const currentQuestion = quizData[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
-    answersContainer.innerHTML = ""; // Limpa as respostas anteriores
+    answersContainer.innerHTML = ""; 
 
     currentQuestion.options.forEach((option, index) => {
         const button = document.createElement("button");
@@ -87,15 +87,15 @@ function loadQuestion() {
         answersContainer.appendChild(button);
     });
 
-    nextButton.disabled = true; // Desabilita o botão Próximo até que uma resposta seja clicada
+    nextButton.disabled = true; 
 }
 
-// Função para lidar com a resposta do usuário
+
 function handleAnswer(selectedIndex) {
     const currentQuestion = quizData[currentQuestionIndex];
     const isCorrect = selectedIndex === currentQuestion.correct;
 
-    // Bloqueia todas as opções após a escolha
+    
     Array.from(answersContainer.children).forEach(button => {
         button.disabled = true;
         button.style.backgroundColor = selectedIndex === currentQuestion.correct ? "#b3ffb3" : "#ffb3b3";
@@ -111,10 +111,10 @@ function handleAnswer(selectedIndex) {
         answersContainer.appendChild(explanation);
     }
 
-    nextButton.disabled = false; // Habilita o botão Próximo
+    nextButton.disabled = false; 
 }
 
-// Função para carregar a próxima pergunta ou finalizar o quiz
+
 function nextQuestion() {
     currentQuestionIndex++;
 
@@ -125,7 +125,7 @@ function nextQuestion() {
     }
 }
 
-// Função para mostrar o resultado final
+
 function showResult() {
     questionElement.style.display = "none";
     answersContainer.style.display = "none";
@@ -134,7 +134,7 @@ function showResult() {
     finalScoreElement.textContent = `Sua pontuação: ${score}/${quizData.length}`;
 }
 
-// Função para reiniciar o quiz
+
 function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
@@ -145,9 +145,9 @@ function restartQuiz() {
     loadQuestion();
 }
 
-// Event Listeners
+
 nextButton.addEventListener("click", nextQuestion);
 restartButton.addEventListener("click", restartQuiz);
 
-// Inicializa o quiz
+
 loadQuestion();
