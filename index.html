@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Redes de Computadores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="ico.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Quiz sobre Redes de Computadores</h1>
+        <p>Teste seus conhecimentos sobre o histórico e conceitos das redes de computadores e da internet!</p>
+    </header>
+
+    <main>
+        <div id="quiz-container">
+            <!-- Pergunta -->
+            <div id="question-container">
+                <p id="question"></p>
+            </div>
+
+            <!-- Respostas -->
+            <div id="answers"></div>
+
+            <!-- Botão Próximo -->
+            <button id="next-button" disabled>Próxima Pergunta</button>
+        </div>
+
+        <!-- Resultado Final -->
+        <div id="result-container" style="display: none;">
+            <h2>Parabéns!</h2>
+            <p id="final-score"></p>
+            <button id="restart-button">Recomeçar Quiz</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Feito por Mateus S.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
