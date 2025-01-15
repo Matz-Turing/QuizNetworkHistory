@@ -12,11 +12,11 @@ Esta aplicação permite ao usuário testar e expandir seus conhecimentos de for
 
 ## Imagens
 
-![Captura de Tela Principal](img/1.png)
+![Captura de Tela Principal](img/1.jpeg)
 
 *Acima está uma captura de tela do quiz em funcionamento.*
 
-![Captura de Tela Principal](img/2.png)
+![Captura de Tela Principal](img/2.jpeg)
 
 *Acima está uma captura de tela da pontuação do usuário no quiz.*
 
